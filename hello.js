@@ -14,3 +14,5 @@ console.log("the sum of "+ num1 +" & " + num2 + "  is  " + sum)
 console.log("the Difference of "+ num1 +" & " + num2 + "  is  " + diff)
 console.log("the Product of "+ num1 +" & " + num2 + "  is  " + prod)
 console.log("the Quotient of "+ num1 +" & " + num2 + "  is  " + Quo)
+
+console.log("This is the lab/factorial branch");
