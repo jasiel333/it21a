@@ -1,4 +1,4 @@
-const readline = require ("readline");
+const readline = require("readline");
 
 const rl = readline.crerateInterface({
     input:process.stdin,
@@ -13,7 +13,7 @@ console.log("3. Exit");
 
 rl.question("Enter your choice (1-3)", choice =>{
     if(choice == "1"){
-        console.log("Hello World"):
+        console.log("Hello World");
     } else if (choice == "2"){
         console.log("Factorial");
     } else if (choice == "3"){
