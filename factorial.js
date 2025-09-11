@@ -25,7 +25,30 @@ console.log("3. Exit");
 
      }
 
- } )
+ } ) 
+     
+     function backToMenu(){
+        console.log("........");
+        console.log("1. Back To Menu");
+        console.log("2. Exit");
+
+        rl.question("What would you like to do next? (1-2)", (backToMenuChoice) =>{
+           if(backToMenuChoice === "1"){
+            console.log();
+            mainMenu();
+           } else if(backToMenuChoice ==="2"){
+             console.log("Exiting program... Goodbye");
+             rl.close();
+           } else {
+             console.log("Invalid choice. Please try Again");
+             backToMenu();
+           }
+
+        })
+     }
+         
+
+mainMenu();      
 
     
 
