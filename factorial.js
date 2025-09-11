@@ -26,6 +26,28 @@ console.log("3. Exit");
      }
 
  } ) 
+     function computeFactorial(){
+        console.log("Factorial");
+
+           rl.question("Enter a number for factorial:", (numStr) =>{
+              let num = parseInt(numStr);
+              
+              if(isNaN(num) || num<0){
+                console.log("Please enter a non-negative intiger");
+          } else {
+
+               let fact = 1;
+                
+               for (let i = 1; i <= num ; i++){
+                    fact *=i;
+               }
+
+               console.log("The factorial of "+ num + " is " + fact);
+          }
+          backToMenu();
+            }
+        
+    ) }
      
      function backToMenu(){
         console.log("........");
