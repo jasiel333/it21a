@@ -1,40 +1,83 @@
 class Hero{
-  #health
+    #health;
 
-    constructor (name,health,attack){
+    constructor(name,health,attack){
         this.name = name;
         this.health = health;
         this.attack = attack;
+        this.item = [];
     }
+    gethealth(){
+      return this.#health;
+  }
 
-     getHealth(){
-          return this.#health = this.health;
-     }
+    getName(){
+    console.log(this.name);
+}
+getAttack(){
+    console.log(this.attack);
+}
+
+  getstatus(){
+    console.log("name: " + this.name);
+    console.log("health: " + this.health);
+    console.log("attack: " + this.attack);
+  }
+  addItem(item){
+    this.item.push(item);
+
+  }
+  totalAttack(){
+    return this.attack + this.item.reduce((sum, i) => sum + i.bonusAttack, 0);
+  } 
+
 }
 
 class Warrior extends Hero{
-  useAbility(){
-    console.log('${this.name} uses power Strike');
-  }
+    useAbility(){
+        console.log(${this.name} use, power, strike);
+    }
 }
+
 class Mage extends Hero{
     constructor(name,health,attack,mana){
         super(name,health,attack);
         this.mana = mana;
     }
+    useAbility(){
+        console.log(${this.name} use fireball);
+    }
 
-useAbility(){
-    console.log('${this.name} uses fireball');
 }
 
+class Item {
+    constructor(name, bonusAttack){
+        this.name = name;
+        this.bonusAttack = bonusAttack;
+    }
 }
 
+const sword = new Item("Sword", 5);
+const staff = new Item("Staff", 3);
+ 
+
+const Thorin= new Warrior("Thorin",100,10);
+Thorin.getName();
+Thorin.getAttack();
+Thorin.addItem(sword);
+console.log(Thorin.totalAttack());
 
 
-const warrior = new Warrior("Thorin",100,10);
-warrior.useAbility()
+const Gandalf = new Mage("Gandalf",80,8,50);
+Gandalf.getName();
+Gandalf.getAttack();
+Gandalf.addItem(staff);
+console.log(Gandalf.totalAttack());
 
-const hero = new Hero("Thorin",100,10);
+function performAbility(hero){
+    console.log("\n");
+    hero.useAbility();
+}
 
-const mage = new Mage("Gandalf",80,8,50);
-mage.useAbility();
+performAbility(Thorin);
+performAbility(Gandalf);
