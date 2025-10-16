@@ -1,4 +1,4 @@
-console.log("Hello World");
+hconsole.log("Hello World");
 
 
 num1 = 2;
