@@ -1,0 +1,12 @@
+{
+   "labels": ["communication","teamwork","Problem Solving","Creativity","Adaptability","Leadership"],
+   "datesets":[
+    {
+ 
+   "labels": "Person A",
+    "data":[80,90,70,85,75,70],
+    "backgrounColor":"rgba(75,192,192,0.2)",
+    "borderColor":"rgba(75,192,192,1)"
+}
+]
+}
